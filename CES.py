@@ -73,8 +73,8 @@ COMMANDS: show modules , show encoders , show scanners, ai , use ,exit
             print(f"{Fore.GREEN} - {encoder}{Style.RESET_ALL}")
 
     def ai_command(self):
-        venv_path = "/path/to/venv/bin/activate"  # Replace with your virtual environment path
-        script_path = "AMAI.py"  # Replace with your AI script path
+        venv_path = "/path/to/venv/bin/activate" 
+        script_path = "AMAI.py" 
 
         if not os.path.exists(venv_path):
             print(f"{Fore.RED}Error: Virtual environment not found at {venv_path}{Style.RESET_ALL}")
@@ -127,7 +127,7 @@ COMMANDS: show modules , show encoders , show scanners, ai , use ,exit
                             else:
                                 print(f"{Fore.RED}Invalid boolean value for {key}. Use 'true' or 'false'.{Style.RESET_ALL}")
                                 continue
-                        # Handle other types (int, float, etc.)
+                    
                         elif isinstance(default_options.get(key), int):
                             try:
                                 value = int(value)
@@ -156,14 +156,14 @@ COMMANDS: show modules , show encoders , show scanners, ai , use ,exit
                     for key, value in options.items():
                         print(f"{Fore.GREEN}{key}: {value}{Style.RESET_ALL}")
                     try:
-                        # Check if brute-force is enabled
+                        
                         if options.get("run_bruteforce", False):
-                            # Launch brute-force in Xterm
+                         
                             cmd = [
                                 'xterm',
                                 '-e',
                                 'python',
-                                'webscan.py',  # Path to your scanner script
+                                'webscan.py',  
                                 target,
                                 '--output', options.get("output", "html"),
                                 '--processes', str(options.get("processes", 4)),
