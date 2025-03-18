@@ -158,7 +158,7 @@ class AdvancedScanner:
         chunk_size = len(wordlist) // self.processes or 1
         chunks = [wordlist[i:i+chunk_size] for i in range(0, len(wordlist), chunk_size)]
 
-        # Prepare pickle-safe configuration for workers
+
         worker_config = {
             'target': self.target,
             'timeout': self.timeout,
@@ -168,10 +168,10 @@ class AdvancedScanner:
         }
 
         with multiprocessing.Pool(processes=self.processes) as pool:
-            # Use starmap to pass both chunk and config to each worker
+
             results = pool.starmap(process_chunk_worker, [(chunk, worker_config) for chunk in chunks])
         
-        # Merge results from all processes
+
         for result in results:
             self.discovered_paths.extend(result)
 
@@ -306,7 +306,7 @@ class AdvancedScanner:
             self.api_scan
         ]
         
-        # Conditionally add brute_force step
+
         if self.run_bruteforce:
             steps.insert(1, self.brute_force_directories)
         
@@ -337,11 +337,11 @@ if __name__ == "__main__":
     }
 
     if args.bruteforce:
-        # Run only brute-force
+    
         scanner = AdvancedScanner(args.target, options)
         scanner.run()
     else:
-        # Launch brute-force in Xterm and run main scan
+
         cmd = [
             'xterm',
             '-e',
