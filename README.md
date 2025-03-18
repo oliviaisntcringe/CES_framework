@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src="https://i.ibb.co/0y4L6Jy/ces-logo.png" alt="Cogito Ergo Sum" width="400">
+  <img src="resources/ascii-animation.gif" alt="Cogito Ergo Sum" width="400">
   <br>
   Cogito Ergo Sum Pentest Framework
   <br>
