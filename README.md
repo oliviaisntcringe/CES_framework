@@ -48,8 +48,6 @@
 
 ### Requirements
 - Python 3.8+
-- 4GB RAM (8GB recommended)
-- Linux/macOS (Windows WSL supported)
 
 ### Quick Start
 ```bash
@@ -113,7 +111,7 @@ CES/webscan > run
 | `show modules` | List available scanners | `show encoders` |
 | `use <module>` | Select module | `use apiscan` |
 | `set <param>` | Configure option | `set threads 20` |
-| `ai <query>` | Ask AI assistant | `ai "explain CVE-2024-1234"` |
+| `ai` | Ask AI assistant | `ai` |
 
 ## ⚙️ Configuration
 
@@ -156,5 +154,5 @@ This project is licensed under the GNU GPLv3 License - see the [LICENSE](LICENSE
 ---
 
 <p align="center">
-  Made with ❤️ by Olivia & AI • Support: issues@ces-framework.com
+  Made with ❤️ by tuerleprince • Support: glebbichivin@yandex.ru
 </p>
