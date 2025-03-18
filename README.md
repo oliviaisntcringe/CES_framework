@@ -20,8 +20,7 @@ Features
 Installation
 ------------
 1. Clone repository:
-   git clone https://github.com/oliviaisntcringe/CES_framework.git
-   cd CES_framework
+   git clone https://github.com/oliviaisntcringe/CES_framework.git && cd CES_framework
 
 2. Install dependencies:
    pip install -r requirements.txt
