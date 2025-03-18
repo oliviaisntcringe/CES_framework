@@ -1,12 +1,4 @@
-"""
-DeepSeek Proof of Work Challenge Implementation
-Author: @xtekky
-Date: 2024
 
-This module implements a proof-of-work challenge solver using WebAssembly (WASM)
-for Custom sha3 hashing. It provides functionality to solve computational challenges
-required for authentication or rate limiting purposes.
-"""
 
 import json
 import base64

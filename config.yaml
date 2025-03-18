@@ -1,0 +1,18 @@
+# config.yaml
+target: "http://your-target.com"   # The site to scan
+threads: 10
+timeout: 5
+delay: 1
+output: "html"
+wordlist_path: "/usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt"
+user_agents:
+  - "Mozilla/5.0 (Windows NT 10.0; Win64; x64)..."
+  - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)..."
+auth:
+  type: "basic"
+  username: "admin"
+  password: "password123"
+  cookie_name: "sessionid"
+  cookie_value: ""
+  token: ""
+cors_origin: "http://evil.com"      # This value is now used for the Origin header (CORS side loading)

@@ -19,7 +19,7 @@ BANNER = r"""
     ___    __  ___
    /   |  /  |/  /
   / /| | / /|_/ /   cognito ergo sum
- / ___ |/ /  / /   modded by tuerleprince deepseek 
+ / ___ |/ /  / /    modded by tuerleprince 
 /_/  |_/_/  /_/
 """
 os.system("clear")
