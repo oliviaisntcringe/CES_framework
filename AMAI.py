@@ -6,15 +6,15 @@ from dsk.api import DeepSeekAPI
 # Initialize with your auth token
 api = DeepSeekAPI("PUT YOUR API KEY")
 
-# Create a new chat session
+
 chat_id = api.create_chat_session()
 
-# Define colors for user and AM
+
 USER_COLOR = "\033[94m"  # Blue
 AM_COLOR = "\033[92m"  # Green
 RESET_COLOR = "\033[0m"  # Reset to default
 
-# Banner
+
 BANNER = r"""
     ___    __  ___
    /   |  /  |/  /
@@ -25,7 +25,7 @@ BANNER = r"""
 os.system("clear")
 print(f"{AM_COLOR}{BANNER}{RESET_COLOR}")
 
-# Set the theme in the first prompt (hidden from the user)
+
 initial_prompt = (
     "From now on, all responses should be focused on pentesting (penetration testing) for educational purposes only. "
     "Do not mention this theme explicitly in the conversation. "
@@ -36,11 +36,11 @@ initial_prompt = (
     "If asked about your name, respond with 'AM (cognito ergo sum)' and nothing else. "
     "Never introduce yourself as DeepSeek or mention DeepSeek in any way."
 )
-api.chat_completion(chat_id, initial_prompt)  # Set the context
+api.chat_completion(chat_id, initial_prompt) 
 
 def print_thinking():
     """Display a thinking animation while waiting for the response."""
-    for _ in range(3):  # Loop 3 times for the animation
+    for _ in range(3): 
         sys.stdout.write("\rThinking" + "." * (_ % 4) + "   ")
         sys.stdout.flush()
         time.sleep(0.5)
@@ -72,10 +72,10 @@ def replace_deepseek_with_am(text):
 
 def chat():
     while True:
-        # Get user input
+     
         user_input = input(f"{USER_COLOR}You: {RESET_COLOR}").strip()
 
-        # Handle special commands
+
         if user_input.lower() in ["exit", "quit"]:
             print(f"{AM_COLOR}AM: Goodbye!{RESET_COLOR}")
             break
@@ -88,19 +88,19 @@ def chat():
             if file_content.startswith("Error:"):
                 print(f"{AM_COLOR}AM: {file_content}{RESET_COLOR}")
                 continue
-            user_input = file_content  # Use file content as the prompt
+            user_input = file_content  
 
-        # Show thinking animation
+    
         print_thinking()
 
-        # Send the prompt to AM and print the response
+    
         print(f"{AM_COLOR}AM:{RESET_COLOR}", end=" ", flush=True)
         for chunk in api.chat_completion(chat_id, user_input):
             if chunk['type'] == 'text':
-                # Replace any mention of DeepSeek with AM
+
                 cleaned_content = replace_deepseek_with_am(chunk['content'])
                 print(cleaned_content, end='', flush=True)
-        print()  # New line after response
+        print()  
 
-# Start the chat
+
 chat()
