@@ -6,7 +6,7 @@
   
   [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-00ff00.svg)](https://www.gnu.org/licenses/gpl-3.0)  
   [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-cyan.svg)](https://www.python.org/)  
-  [![Blackbox AI](https://img.shields.io/badge/AI%20Assistant-Blackbox%20v3.2-red.svg)](https://example.com)
+
 </div>
 
 ---
