@@ -26,8 +26,7 @@ Installation
    pip install -r requirements.txt
 
 3. Launch:
-   source /path/to/your/venv/
-   python3 CES.py
+   source /path/to/your/venv/ && python3 CES.py
    
 AI Setup
 ------------
