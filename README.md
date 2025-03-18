@@ -7,6 +7,7 @@
 </h1>
 
 <h4 align="center">Advanced AI-Powered Penetration Testing Framework</h4>
+<h3 align="center">"I Scan, Therefore I Secure" - AI-Powered Offensive Security Toolkit</h3>
 <p align="center">
   <img src="https://img.shields.io/badge/License-GPLv3-blue.svg">
   <img src="https://img.shields.io/badge/Python-3.8%2B-blue">
