@@ -53,12 +53,13 @@ Start framework:
    python3 CES.py
 
 Example workflow:
-   show scanners
-   use webscan
-   set target http://example.com
-   set threads 20
-   set output json
-   run
+   show scanners /
+   use webscan /
+   show options / 
+   set target http://example.com / 
+   set threads 20 / 
+   set output json /
+   run / 
 
 Key Commands
 ------------
@@ -78,22 +79,22 @@ Configuration
 -------------
 Edit config.yaml for default settings:
 
-target: "http://test.site"
-threads: 15
-processes: 4
-timeout: 5
-output: "html"
-wordlist_path: "/path/to/wordlist.txt"
-auth:
-  type: "basic"
-  username: "admin"
-  password: "password"
+target: "http://test.site" /
+threads: 15 /
+processes: 4 /
+timeout: 5 / 
+output: "html" / 
+wordlist_path: "/path/to/wordlist.txt" / 
+auth: / 
+  type: "basic" / 
+  username: "admin" / 
+  password: "password" / 
 
 AI Assistant
 ------------
 Example interaction:
-You: How to test for SQL injection?
-AM: Try payloads like ' OR 1=1-- and monitor response...
+You: How to test for SQL injection? /
+AM: Try payloads like ' OR 1=1-- and monitor response... /
 
 Legal Notice
 ------------
