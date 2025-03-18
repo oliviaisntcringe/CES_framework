@@ -100,15 +100,15 @@ python3 CES.py
 CES > show scanners
 CES > use webscan
 CES/webscan > set target http://example.com
-CES/webscan > set intensity paranoid
+CES/webscan > show options
 CES/webscan > run
 ```
 
 ### Command Cheatsheet
 | Command | Description | Example |
 |---------|-------------|---------|
-| `show modules` | List available scanners | `show encoders` |
-| `use <module>` | Select module | `use apiscan` |
+| `show modules` | List available scanners | `show scanners` |
+| `use <module>` | Select module | `use webscan` |
 | `set <param>` | Configure option | `set threads 20` |
 | `ai` | Ask AI assistant | `ai` |
 
