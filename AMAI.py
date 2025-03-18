@@ -4,7 +4,7 @@ import os
 from dsk.api import DeepSeekAPI
 
 # Initialize with your auth token
-api = DeepSeekAPI("o4hOpga9CPJJkMInB1dOWuruzjUg8c1ck1mJtKYhftji/qxqLQMn+zC5GSBayDAu")
+api = DeepSeekAPI("PUT YOUR API KEY")
 
 # Create a new chat session
 chat_id = api.create_chat_session()
