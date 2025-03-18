@@ -57,9 +57,11 @@ git clone https://github.com/oliviaisntcringe/CES_framework.git
 cd CES_framework
 
 # Install dependencies
-pip install -r requirements.txt
+chmod +x install.sh
+./install.sh
 
 # Launch framework
+source venv/bin/activate
 python3 CES.py
 ```
 
