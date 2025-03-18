@@ -1,117 +1,160 @@
-Cogito Ergo Sum Pentest Framework
- ==================================
- 
- An advanced penetration testing framework with AI integration and web vulnerability scanning.
- 
- Features
- --------
- - Multi-module architecture:
-   * Web vulnerability scanner (SQLi, XSS, Business Logic flaws)
-   * Directory brute-forcer with multi-process support
-   * AI-powered pentesting assistant
-   * Multiple output formats (HTML, JSON, CSV)
- 
- - Advanced scanning capabilities:
-   * Customizable wordlists
-   * Parallel scanning with process/thread control
-   * Technology stack detection
-   * API security testing (GraphQL introspection)
- 
- Installation
- ------------
- 1. Clone repository:
-    git clone https://github.com/oliviaisntcringe/CES_framework.git && cd CES_framework
- 
- 2. Install dependencies:
-    pip install -r requirements.txt
- 
- 3. Launch:
-    source /path/to/your/venv/
-    python3 CES.py
-    source /path/to/your/venv/ && python3 CES.py
- 
- AI Setup
- ------------
- 
- From LocalStorage 
- 
- <img width="1150" alt="image" src="https://github.com/user-attachments/assets/b4e11650-3d1b-4638-956a-c67889a9f37e" />
- 
- 1. Visit [chat.deepseek.com](https://chat.deepseek.com)
- 2. Log in to your account
- 3. Open browser developer tools (F12 or right-click > Inspect)
- 4. Go to Application tab (if not visible, click >> to see more tabs)
- 5. In the left sidebar, expand "Local Storage"
- 6. Click on "https://chat.deepseek.com"
- 7. Find the key named `userToken`
- 8. Copy `"value"` - this is your authentication token
- 9. Open AMAI.py and put your token here
- 
- Basic Usage
- -----------
- Start framework:
-    python3 CES.py
- 
- Example workflow:
-    show scanners /
-    use webscan /
-    show options / 
-    set target http://example.com / 
-    set threads 20 / 
-    set output json /
-    run / 
- 
- Key Commands
- ------------
- Main interface:
-    show scanners    - List available scanners
-    show encoders   - Show encoding schemes
-    use <scanner>   - Enter scanner config
-    ai              - Launch AI assistant
-    exit            - Quit framework
- 
- Scanner commands:
-    set <option> <value> - Configure parameters
-    show options        - View current config
-    run                 - Start scanning
- 
- Configuration
- -------------
- Edit config.yaml for default settings:
- 
- target: "http://test.site" /
- threads: 15 /
- processes: 4 /
- timeout: 5 / 
- output: "html" / 
- wordlist_path: "/path/to/wordlist.txt" / 
- auth: / 
-   type: "basic" / 
-   username: "admin" / 
-   password: "password" / 
- 
- AI Assistant
- ------------
- Example interaction:
- You: How to test for SQL injection? /
- AM: Try payloads like ' OR 1=1-- and monitor response... /
- 
-🚀 Roadmap
-Our journey has just begun! Upcoming features include:
+<h1 align="center">
+  <br>
+  <img src="https://i.ibb.co/0y4L6Jy/ces-logo.png" alt="Cogito Ergo Sum" width="400">
+  <br>
+  Cogito Ergo Sum Pentest Framework
+  <br>
+</h1>
 
-🔓 Exploitation Module:
-Integrate a module to exploit vulnerabilities detected by the scanner.
-🗂️ Automated Zero-Day Exploits Repository:
-Create a dynamic directory of zero-day exploits.
-🤖 AI-Driven Exploit Development:
-Utilize AI to write and integrate custom exploits as modules.
-🎨 Graphical User Interface (GUI):
-Develop an intuitive GUI for simplified control and monitoring.
+<h4 align="center">Advanced AI-Powered Penetration Testing Framework</h4>
+<p align="center">
+  <img src="https://img.shields.io/badge/License-GPLv3-blue.svg">
+  <img src="https://img.shields.io/badge/Python-3.8%2B-blue">
+  <img src="https://img.shields.io/badge/Version-1.0.0-red">
+</p>
 
- Legal Notice
- ------------
- Use only on authorized systems. Developers assume no liability for unauthorized use.
- 
- License
- -------
- GNU General Public License v3.0
+![Framework Demo](https://github.com/oliviaisntcringe/CES_framework/raw/main/docs/demo.gif)
+
+## ✨ Features
+
+### 🛡️ Multi-Module Architecture
+- **Web Vulnerability Scanner**
+  - SQL injection detection
+  - XSS payload validation
+  - Business logic flaw analysis
+  - CSRF token detection
+
+- **Intelligent Directory Brute-forcer**
+  - Multi-process architecture
+  - Dynamic timeout handling
+  - Custom wordlist support
+  - Progress visualization
+
+- **AI Assistant Integration**
+  - DeepSeek LLM integration
+  - Vulnerability explanation
+  - Attack vector suggestions
+  - Report generation
+
+### ⚡ Advanced Capabilities
+```plaintext
+• Parallel scanning engine (threads/processes hybrid)
+• Technology fingerprinting (Wappalyzer integration)
+• API security testing (GraphQL/REST validation)
+• Multi-format reporting (HTML/JSON/CSV/PDF)
+```
+
+## 🚀 Installation
+
+### Requirements
+- Python 3.8+
+- 4GB RAM (8GB recommended)
+- Linux/macOS (Windows WSL supported)
+
+### Quick Start
+```bash
+# Clone repository
+git clone https://github.com/oliviaisntcringe/CES_framework.git
+cd CES_framework
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Launch framework
+python3 CES.py
+```
+
+### Virtual Environment (Recommended)
+```bash
+python3 -m venv ces-env
+source ces-env/bin/activate
+pip install --upgrade pip wheel
+```
+
+## 🤖 AI Integration Setup
+
+![DeepSeek Token Setup](https://github.com/user-attachments/assets/b4e11650-3d1b-4638-956a-c67889a9f37e)
+
+1. **Get Authentication Token:**
+   ```bash
+   1. Visit https://chat.deepseek.com
+   2. Login to your account
+   3. Open DevTools (F12)
+   4. Navigate to: Application → Local Storage → userToken
+   5. Copy the token value
+   ```
+
+2. **Configure Framework:**
+   ```python
+   # config/ai_settings.yaml
+   deepseek:
+     api_token: "your_token_here"
+     model_version: "pro"
+     max_tokens: 2048
+   ```
+
+## 🕹️ Basic Usage
+
+### Framework Interface
+```bash
+# Start main console
+python3 CES.py
+
+CES > show scanners
+CES > use webscan
+CES/webscan > set target http://example.com
+CES/webscan > set intensity paranoid
+CES/webscan > run
+```
+
+### Command Cheatsheet
+| Command | Description | Example |
+|---------|-------------|---------|
+| `show modules` | List available scanners | `show encoders` |
+| `use <module>` | Select module | `use apiscan` |
+| `set <param>` | Configure option | `set threads 20` |
+| `ai <query>` | Ask AI assistant | `ai "explain CVE-2024-1234"` |
+
+## ⚙️ Configuration
+
+### config.yaml Example
+```yaml
+core:
+  threads: 15
+  processes: 4
+  timeout: 7.5
+  output_format: "html"
+  report_dir: "./reports"
+
+webscan:
+  wordlists:
+    directories: "/wordlists/general.txt"
+    payloads: "/wordlists/xss-payloads.txt"
+  risk_level: 3
+  crawl_depth: 5
+```
+
+## 🌟 Roadmap
+
+### Q3 2024
+- [ ] Automated Exploit Generation
+- [ ] GraphQL Attack Surface Mapping
+- [ ] CI/CD Pipeline Scanner
+
+### Q4 2024
+- [ ] Zero-Day Exploit Database
+- [ ] AI-Powered Fuzzing Engine
+- [ ] Dark Web Monitoring Module
+
+## 📜 License
+
+This project is licensed under the GNU GPLv3 License - see the [LICENSE](LICENSE) file for details.
+
+> **Warning**  
+> This tool should only be used on systems with explicit permission. Unauthorized testing is illegal.
+
+---
+
+<p align="center">
+  Made with ❤️ by Olivia & AI • Support: issues@ces-framework.com
+</p>
