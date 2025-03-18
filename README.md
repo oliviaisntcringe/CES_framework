@@ -84,11 +84,10 @@ pip install --upgrade pip wheel
 
 2. **Configure Framework:**
    ```python
-   # config/ai_settings.yaml
-   deepseek:
-     api_token: "your_token_here"
-     model_version: "pro"
-     max_tokens: 2048
+   # AMAI.py
+     from dsk.api import DeepSeekAPI
+     # Initialize with your auth token
+     api = DeepSeekAPI("PUT YOUR API KEY")
    ```
 
 ## 🕹️ Basic Usage
