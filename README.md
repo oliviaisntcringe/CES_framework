@@ -96,6 +96,18 @@ Cogito Ergo Sum Pentest Framework
  You: How to test for SQL injection? /
  AM: Try payloads like ' OR 1=1-- and monitor response... /
  
+🚀 Roadmap
+Our journey has just begun! Upcoming features include:
+
+🔓 Exploitation Module:
+Integrate a module to exploit vulnerabilities detected by the scanner.
+🗂️ Automated Zero-Day Exploits Repository:
+Create a dynamic directory of zero-day exploits.
+🤖 AI-Driven Exploit Development:
+Utilize AI to write and integrate custom exploits as modules.
+🎨 Graphical User Interface (GUI):
+Develop an intuitive GUI for simplified control and monitoring.
+
  Legal Notice
  ------------
  Use only on authorized systems. Developers assume no liability for unauthorized use.
