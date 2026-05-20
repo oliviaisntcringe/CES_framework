@@ -8,11 +8,18 @@
 
 <h4 align="center">Advanced AI-Powered Penetration Testing Framework</h4>
 <h3 align="center">"I Scan, Therefore I Secure" - AI-Powered Offensive Security Toolkit</h3>
-<p align="center">
-  <img src="https://img.shields.io/badge/License-GPLv3-blue.svg">
-  <img src="https://img.shields.io/badge/Python-3.8%2B-blue">
-  <img src="https://img.shields.io/badge/Version-1.0.0-red">
-</p>
+
+<div align="center">
+
+[![Python Badge](https://img.shields.io/badge/Python-3.8%2B-3776ab?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPLv3-blue?style=flat-square)](LICENSE)
+[![Version](https://img.shields.io/badge/Version-1.0.0-red?style=flat-square)](#cogito-ergo-sum-pentest-framework)
+[![AI Integration](https://img.shields.io/badge/AI-DeepSeek%20LLM-9B59B6?style=flat-square)](#-ai-integration-setup)
+[![Status](https://img.shields.io/badge/Status-Active-27ae60?style=flat-square)](#-features)
+[![Security Level](https://img.shields.io/badge/Security%20Tooling-Advanced-FF6B35?style=flat-square)](#cogito-ergo-sum-pentest-framework)
+[![Maintained](https://img.shields.io/badge/Maintained-Yes-2ecc71?style=flat-square)](#cogito-ergo-sum-pentest-framework)
+
+</div>
 
 ![Framework Demo](https://github.com/oliviaisntcringe/CES_framework/raw/main/docs/demo.gif)
 
